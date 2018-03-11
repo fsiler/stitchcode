@@ -100,7 +100,7 @@ class Embroidery:
 		self.coords.append(coord)
 
 		# calculate density on given points
-		if self.density.has_key(coord.toString()):
+		if coord.toString() in self.density:
 			self.density[coord.toString()] += 1
 			if self.density[coord.toString()] > density_max:
 				self.densityWarning = True
